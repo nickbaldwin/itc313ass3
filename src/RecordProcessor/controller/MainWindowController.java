@@ -32,16 +32,20 @@ public class MainWindowController
 
   private int currentMark = 0;
 
-  @FXML private TextField textFieldForStudentId;
-  @FXML private Label errorLabelForStudentId;
-  @FXML private TextField textFieldForQuiz;
-  @FXML private Label errorLabelForQuiz;
-  @FXML private TextField textFieldForAssignment1;
-  @FXML private Label errorLabelForAssignment1;
-  @FXML private TextField textFieldForAssignment2;
-  @FXML private Label errorLabelForAssignment2;
-  @FXML private TextField textFieldForFinalExam;
-  @FXML private Label errorLabelForFinalExam;
+  @FXML private TextField  textFieldForStudentId;
+  @FXML private Label     errorLabelForStudentId;
+
+  @FXML private TextField  textFieldForQuiz;
+  @FXML private Label     errorLabelForQuiz;
+
+  @FXML private TextField  textFieldForAssignment1;
+  @FXML private Label     errorLabelForAssignment1;
+
+  @FXML private TextField  textFieldForAssignment2;
+  @FXML private Label     errorLabelForAssignment2;
+
+  @FXML private TextField  textFieldForFinalExam;
+  @FXML private Label     errorLabelForFinalExam;
 
   @FXML private Label title;
 
@@ -91,17 +95,18 @@ public class MainWindowController
 
         displayGradeInResultsTextArea();
         clearDetails();
+
       } catch ( Exception exception ) {
         System.out.println( "Student record is invalid." );
       }
 
     } );
 
-    averageMarkButton.setOnAction( ( event ) -> {
+    averageMarkButton.setOnAction( (event) -> {
       clearErrorMessages();
       clearDetails();
       displayAverageGradeInResultsTextArea();
-    } );
+      } );
 
   }
 
