@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="600.0" style="-fx-border-color: #333333; -fx-border-width: 3px; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GradeProcessor.controller.MainWindowController">
+   <children>
+      <GridPane alignment="BOTTOM_CENTER" hgap="5.0" layoutX="226.0" layoutY="69.0" nodeOrientation="LEFT_TO_RIGHT" vgap="5.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="textFieldForAssignment1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="90.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <tooltip>
+                  <Tooltip anchorX="0.0" anchorY="0.0" autoHide="true" height="20.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" text="Enter the mark for Assignment 1 here. The mark must be a valid integer." width="100.0" wrapText="true" x="0.0" y="0.0" />
+               </tooltip>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textFieldForAssignment2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="90.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <tooltip>
+                  <Tooltip text="Enter the mark for Assignment 2 here. The mark must be a valid integer." />
+               </tooltip>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="labelForQuiz" alignment="CENTER_RIGHT" text="Mark for Quiz" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldForFinalExam" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="90.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <tooltip>
+                  <Tooltip text="Enter the mark for the Final Exam here. The mark must be a valid integer." />
+               </tooltip>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="labelForAssignment1" text="Mark for Assignment 1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelForAssignment2" text="Mark for Assignment 2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelForFinalExam" text="Mark for Final Exam" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldForQuiz" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="90.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <tooltip>
+                  <Tooltip text="Enter the mark for the Quiz here. The mark must be a valid integer." />
+               </tooltip>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="labelForStudentId" text="Student ID" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldForStudentId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="90.0" GridPane.columnIndex="1">
+               <tooltip>
+                  <Tooltip text="Enter the Student ID here. The ID must be an integer (up to 8 digits)." />
+               </tooltip>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="errorLabelForStudentId" style="-fx-background-color: #eeaaaa;" text="Must be 1-8 digits" visible="false" GridPane.columnIndex="2">
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabelForQuiz" style="-fx-background-color: #eeaaaa;" text="Must be 0 -100" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabelForAssignment1" style="-fx-background-color: #eeaaaa;" text="Must be 0 -100" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabelForAssignment2" style="-fx-background-color: #eeaaaa;" text="Must be 0 - 100" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabelForFinalExam" style="-fx-background-color: #eeaaaa;" text="Must be 0 - 100" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+      <AnchorPane layoutX="33.0" layoutY="-72.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #cccccc;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="title" layoutX="252.0" layoutY="14.0" text="Grade Processor" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextArea editable="false" layoutX="14.0" layoutY="94.0" prefHeight="155.0" prefWidth="175.0" text="Please enter the student ID and results for this subject then click the Student Mark button to display the final result. &#10;&#10;To calculate the average of all of the student results, click the Average Mark button." wrapText="true">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </TextArea>
+      <GridPane AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="30.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="170.0" prefWidth="170.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="230.0" prefWidth="230.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelForResults" text="Results">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="averageMarkButton" mnemonicParsing="false" text="Average Mark" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <tooltip>
+                  <Tooltip text="Click to calculate the average mark for all student results entered" />
+               </tooltip>
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="studentMarkButton" mnemonicParsing="false" text="Student Mark" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <tooltip>
+                  <Tooltip text="Click to calculate the final mark for the student results above." />
+               </tooltip>
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin>
+            </Button>
+            <TextArea fx:id="resultsTextArea" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+               <tooltip>
+                  <Tooltip text="The final mark for the student or average mark for all student marks is displayed here." />
+               </tooltip>
+               <font>
+                  <Font size="12.0" />
+               </font></TextArea>
+         </children>
+      </GridPane>
+      <AnchorPane layoutX="6.0" layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #eeeeee;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <Label layoutY="10.0" text="Enter Results" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="6.0" layoutY="267.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #eeeeee;" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutY="10.0" text="Calculate Marks" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
